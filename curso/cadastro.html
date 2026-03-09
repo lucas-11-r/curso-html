@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        .radio-group,
+        .checkbox-group {
+            margin: 10px 0;
+        }
+        .radio-group label,
+        .checkbox-group label {
+            display: inline;
+            font-weight: normal;
+            margin-right: 15px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        button[type="reset"] {
+            background-color: #f44336;
+        }
+        button[type="reset"]:hover {
+            background-color: #da190b;
+        }
+        fieldset {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        legend {
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulário de Cadastro</h1>
+    
+    <form action="formulario.html" method="post">
+        <!-- Dados Pessoais -->
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            
+            <div class="form-group">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
+            </div>
+            
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required placeholder="seu@email.com">
+            </div>
+            
+            <div class="form-group">
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required minlength="6" placeholder="Mínimo 6 caracteres">
+            </div>
+            
+            <div class="form-group">
+                <label for="nascimento">Data de Nascimento:</label>
+                <input type="date" id="nascimento" name="nascimento">
+            </div>
+            
+            <div class="form-group">
+                <label for="idade">Idade:</label>
+                <input type="number" id="idade" name="idade" min="18" max="100">
+            </div>
+            
+            <div class="form-group">
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
+            </div>
+        </fieldset>
+        
+        <!-- Endereço -->
+        <fieldset>
+            <legend>Endereço</legend>
+            
+            <div class="form-group">
+                <label for="rua">Rua:</label>
+                <input type="text" id="rua" name="rua">
+            </div>
+            
+            <div class="form-group">
+                <label for="numero">Número:</label>
+                <input type="number" id="numero" name="numero" min="1">
+            </div>
+            
+            <div class="form-group">
+                <label for="cidade">Cidade:</label>
+                <input type="text" id="cidade" name="cidade">
+            </div>
+            
+            <div class="form-group">
+                <label for="estado">Estado:</label>
+                <select id="estado" name="estado">
+                    <option value="">Selecione...</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="PR">Paraná</option>
+                    <option value="outro">Outro</option>
+                </select>
+            </div>
+        </fieldset>
+        
+        <!-- Preferências -->
+        <fieldset>
+            <legend>Preferências</legend>
+            
+            <div class="form-group">
+                <label>Gênero:</label>
+                <div class="radio-group">
+                    <input type="radio" id="masculino" name="genero" value="masculino">
+                    <label for="masculino">Masculino</label>
+                    
+                    <input type="radio" id="feminino" name="genero" value="feminino">
+                    <label for="feminino">Feminino</label>
+                    
+                    <input type="radio" id="outro" name="genero" value="outro">
+                    <label for="outro">Outro</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Interesses:</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="esportes" name="interesses" value="esportes">
+                    <label for="esportes">Esportes</label>
+                    
+                    <input type="checkbox" id="musica" name="interesses" value="musica">
+                    <label for="musica">Música</label>
+                    
+                    <input type="checkbox" id="tecnologia" name="interesses" value="tecnologia">
+                    <label for="tecnologia">Tecnologia</label>
+                    
+                    <input type="checkbox" id="leitura" name="interesses" value="leitura">
+                    <label for="leitura">Leitura</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="obs">Observações:</label>
+                <textarea id="obs" name="observacoes" placeholder="Alguma observação adicional?"></textarea>
+            </div>
+        </fieldset>
+        
+        <!-- Botões -->
+        <div class="form-group">
+            <button type="submit">Enviar</button>
+            <button type="reset">Limpar</button>
+        </div>
+    </form>
+</body>
+</html>

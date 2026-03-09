@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício - Formulário HTML (Gabarito)</title>
+</head>
+<body>
+    <!-- 
+    EXERCÍCIO: Crie um formulário de cadastro completo com os seguintes elementos:
+    
+    1. Um formulário (<form>) que envie para "formulario.html" usando método POST
+    2. Um grupo de campos (<fieldset>) para "Dados Pessoais" com:
+       - Campo de texto para nome (<input type="text">)
+       - Campo de e-mail (<input type="email">)
+       - Campo de senha (<input type="password">)
+    3. Um grupo de campos para "Endereço" com:
+       - Campo de texto para rua
+       - Campo numérico para número
+       - Campo de texto para cidade
+       - Menu dropdown (<select>) para estado
+    4. Um grupo de campos para "Preferências" com:
+       - Botões de opção única (<input type="radio">) para gênero
+       - Caixas de seleção (<input type="checkbox">) para interesses
+    5. Um campo de texto multilinha (<textarea>) para observações
+    6. Dois botões: um para enviar (<button type="submit">) e outro para limpar (<button type="reset">)
+    -->
+    
+    <!-- GABARITO -->
+    
+    <h1>Formulário de Cadastro</h1>
+    
+    <!-- Tag form com action e method -->
+    <form action="formulario.html" method="post">
+        
+        <!-- Grupo: Dados Pessoais -->
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            
+            <!-- Campo Nome -->
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
+            
+            <!-- Campo E-mail -->
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required placeholder="seu@email.com">
+            
+            <!-- Campo Senha -->
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required minlength="6">
+            
+            <!-- Campo Data de Nascimento -->
+            <label for="nascimento">Data de Nascimento:</label>
+            <input type="date" id="nascimento" name="nascimento">
+            
+            <!-- Campo Idade -->
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" name="idade" min="18" max="100">
+        </fieldset>
+        
+        <!-- Grupo: Endereço -->
+        <fieldset>
+            <legend>Endereço</legend>
+            
+            <!-- Campo Rua -->
+            <label for="rua">Rua:</label>
+            <input type="text" id="rua" name="rua">
+            
+            <!-- Campo Número -->
+            <label for="numero">Número:</label>
+            <input type="number" id="numero" name="numero" min="1">
+            
+            <!-- Campo Cidade -->
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="cidade" name="cidade">
+            
+            <!-- Campo Estado (select) -->
+            <label for="estado">Estado:</label>
+            <select id="estado" name="estado">
+                <option value="">Selecione...</option>
+                <option value="SP">São Paulo</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="MG">Minas Gerais</option>
+            </select>
+        </fieldset>
+        
+        <!-- Grupo: Preferências -->
+        <fieldset>
+            <legend>Preferências</legend>
+            
+            <!-- Gênero (radio buttons) -->
+            <label>Gênero:</label>
+            <input type="radio" id="masculino" name="genero" value="masculino">
+            <label for="masculino">Masculino</label>
+            
+            <input type="radio" id="feminino" name="genero" value="feminino">
+            <label for="feminino">Feminino</label>
+            
+            <!-- Interesses (checkboxes) -->
+            <label>Interesses:</label>
+            <input type="checkbox" id="esportes" name="interesses" value="esportes">
+            <label for="esportes">Esportes</label>
+            
+            <input type="checkbox" id="musica" name="interesses" value="musica">
+            <label for="musica">Música</label>
+            
+            <!-- Observações (textarea) -->
+            <label for="observacoes">Observações:</label>
+            <textarea id="observacoes" name="observacoes" placeholder="Digite suas observações"></textarea>
+        </fieldset>
+        
+        <!-- Botões -->
+        <button type="submit">Enviar</button>
+        <button type="reset">Limpar</button>
+        
+    </form>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício - Formulário HTML</title>
+</head>
+<body>
+    <!-- 
+    EXERCÍCIO: Crie um formulário de cadastro completo com os seguintes elementos:
+    
+    1. Um formulário (<form>) que envie para "formulario.html" usando método POST
+    2. Um grupo de campos (<fieldset>) para "Dados Pessoais" com:
+       - Campo de texto para nome (<input type="text">)
+       - Campo de e-mail (<input type="email">)
+       - Campo de senha (<input type="password">)
+    3. Um grupo de campos para "Endereço" com:
+       - Campo de texto para rua
+       - Campo numérico para número
+       - Campo de texto para cidade
+       - Menu dropdown (<select>) para estado
+    4. Um grupo de campos para "Preferências" com:
+       - Botões de opção única (<input type="radio">) para gênero
+       - Caixas de seleção (<input type="checkbox">) para interesses
+    5. Um campo de texto multilinha (<textarea>) para observações
+    6. Dois botões: um para enviar (<button type="submit">) e outro para limpar (<button type="reset">)
+    
+   Complete o código abaixo!
+    -->
+    
+    <!-- ESCREVA SEU CÓDIGO ABAIXO: -->
+    
+    <h1>Formulário de Cadastro</h1>
+    
+    <!-- Tag form com action e method -->
+    <form action="" method="">
+        
+        <!-- Grupo: Dados Pessoais -->
+        <fieldset>
+            <legend></legend>
+            
+            <!-- Campo Nome -->
+            <label for=""></label>
+            <input type="" id="" name="" required placeholder="">
+            
+            <!-- Campo E-mail -->
+            <label for=""></label>
+            <input type="" id="" name="" required placeholder="">
+            
+            <!-- Campo Senha -->
+            <label for=""></label>
+            <input type="" id="" name="" required minlength="">
+            
+            <!-- Campo Data de Nascimento -->
+            <label for=""></label>
+            <input type="" id="" name="">
+            
+            <!-- Campo Idade -->
+            <label for=""></label>
+            <input type="" id="" name="" min="" max="">
+        </fieldset>
+        
+        <!-- Grupo: Endereço -->
+        <fieldset>
+            <legend></legend>
+            
+            <!-- Campo Rua -->
+            <label for=""></label>
+            <input type="" id="" name="">
+            
+            <!-- Campo Número -->
+            <label for=""></label>
+            <input type="" id="" name="" min="">
+            
+            <!-- Campo Cidade -->
+            <label for=""></label>
+            <input type="" id="" name="">
+            
+            <!-- Campo Estado (select) -->
+            <label for=""></label>
+            <select id="" name="">
+                <option value="">Selecione...</option>
+            </select>
+        </fieldset>
+        
+        <!-- Grupo: Preferências -->
+        <fieldset>
+            <legend></legend>
+            
+            <!-- Gênero (radio buttons) -->
+            <label>Gênero:</label>
+            <input type="" id="" name="" value="">
+            <label for=""></label>
+            
+            <input type="" id="" name="" value="">
+            <label for=""></label>
+            
+            <!-- Interesses (checkboxes) -->
+            <label>Interesses:</label>
+            <input type="" id="" name="" value="">
+            <label for=""></label>
+            
+            <input type="" id="" name="" value="">
+            <label for=""></label>
+            
+            <!-- Observações (textarea) -->
+            <label for=""></label>
+            <textarea id="" name="" placeholder=""></textarea>
+        </fieldset>
+        
+        <!-- Botões -->
+        <button type=""></button>
+        <button type=""></button>
+        
+    </form>
+    
+    <!-- 
+    DICA: Reveja as tags de formulário:
+    - form action= method= = tag principal do formulário
+    - fieldset = grupo de campos relacionados
+    - legend = título do grupo de campos
+    - label for= = rótulo para um campo de entrada
+    - input type= name= = campo de entrada
+    - select/option = menu dropdown
+    - textarea = campo de texto multilinha
+    - button type=submit = botão de envio
+    - button type=reset = botão para limpar
+    -->
+</body>
+</html>

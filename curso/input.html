@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>FORMULARIO</h2>
+    <form action="formulario.html" method="post">
+        <fieldset>
+            <legend>Endereço</legend>
+        <p>
+        <label for = "input - rua">RUA</label>
+        <input id="input - rua" type="text" name="rua" required>
+        </p>
+
+        <p>
+            <label for="input - Number">Numero</label>
+            <input id="input - Number" type="number" name="Numero" min="0" max="10"required/>
+        </p>
+        </fieldset>
+         <p>
+            <label for="input - Email">email</label>
+            <input id="input - Email" type="email" name="E-mail" value="meuemail@gmail.com" readonly>
+        </p>
+         <p>
+           <label for="input - TEL">Telefone </label>
+            <input id="input - TEL" type="TELL'" name="Telefone" placeholder="(99)9999-9999" pattern="(\(\d{2}\)\s?)?\d{4,5}-\d{4}" >
+        </p>
+         <p>
+            <label for="input - busca">Busca</label>
+            <input id="input - busca" type="search" name="busca" required>
+        </p>
+        <p>
+            <label for="input - url">URL</label>
+            <input id="input - url" type="url" name="url" required>
+        </p>
+        <p>
+            <label for="input - senha">Senha</label>
+            <input id="input - senha" type="password" name="senha" required>
+        </p>
+        <p>
+            <label for="input - data">Data</label>
+            <input id="input - data" type="date" name="data" required>
+
+        </p>
+        <p>
+            <label for="input - data/hora">Data/Hora</label>
+            <input id="input - data/hora" type="datetime-local" name="data/hora" required>
+
+        </p>
+        <p>
+            <label for="input - teste">Teste</label>
+            <input id="input - teste" type="week" name="tete" required>
+
+        </p>
+        <p>
+            <label for="input - mes">Mês</label>
+            <input id="input - mes" type="month" name="mes" required>
+
+        </p>
+<!-- tipos de input -->
+        <p>
+            <label for="input - cor">Cor</label>
+            <input id="input - cor" type="color" name="cor" required>
+
+        </p> 
+        <p>
+            <label for="input - arquivo">Arquivo</label>
+            <input id="input - arquivo" type="file" name="arquivo" accept=".mp3,.mp4,.png,.zip" multiple>
+
+        </p> 
+        <p>
+            <label for="input - range">Range</label>
+            <input id="input - range" type="range" name="range" min="0" max="10" step="5">
+
+        </p> 
+
+        <p>
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem"></textarea>
+        </p>
+        <p>
+            <label for="opcoes">Opeções</label>
+            <select id="opcoes" name="opcoes" multiple>
+        <option value="1">Opção 1</option>
+        <option value="2">Opção 2</option>        
+        <option value="3">Opção 3</option>
+            </select>
+        </p>
+
+
+
+        <p>
+            <input type="submit" value="Botão de envio">
+        </p>
+        <p>
+            <input type="reset" value="Botão de limpar">
+        </p>
+        <p>
+            <input type="image" value="image/nome da img salva">
+        </p>
+
+
+
+
+
+
+
+
+<!-- preferencia usar os (buttons) do que o (input)-->
+<button  type="submit">enviar </button>
+<button  type="reset">limpar </button>
+    </form>
+</body>
+</html>
